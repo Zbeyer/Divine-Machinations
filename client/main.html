@@ -1,0 +1,1058 @@
+<head>
+	<title>Divine Machinations</title>
+</head>
+
+<body>
+<h1>Divine Machinations</h1>
+<h2>
+	A D&D Module
+</h2>
+<div class="tabs">
+	<button onclick="tab('module')">Module</button>
+	<button onclick="tab('sheet')">Sheet</button>
+	<button onclick="tab('cards')">Cards</button>
+</div>
+<p>This content is independently created and is not affiliated with, nor has it been authorized, sponsored, or otherwise
+	approved by Wizards of the Coast.</p>
+<p>Periodically you may see references to Nora. <a href="https://github.com/Zbeyer/Nora/blob/master/Nora.md"
+												   target="_blank">Nora</a>, was the first incarnation of this homebrew.
+</p>
+<hr>
+<p><i>Numbers are still being playtested</i></p>
+<br>
+<hr>
+WIP - Work in progreess
+<hr>
+<br>
+<h1>Role Playing</h1>
+<hr>
+<h2>Character Sheet</h2>
+<p><code>
+	Name - What is your character called? <br>
+	Race - What is your character's race? Race determines longevity, buffs to your ability scrores, and occassionally
+	what features you have access to. <br>
+	Alignment - What is your character's moral compass? <br>
+	Background - What was your character doing before the campeign? <br> <br>
+	Skill - What is your character good at? <br> <br>
+
+	Ability Scores - What are your charachter's abilities? <br>
+	HP Max (min of 1) - How many hits can your character take before they drop? <br><br>
+
+	DTP - keep track of down time points (1pt is 1 hour). <br>
+	XP - keep track of experience. <br>
+	GP - Keep track of money. <br><br>
+
+	Inventory - Keep track of items and gear owned and worn (where is it, what does it do, etc.) <br>
+	Unlocked - class levels, features, spells, and key words are learned but not immediately applied. <br><br>
+
+	<hr>
+	<br>
+	New characters use point buy for ability scores. <br> <br>
+	New characters have 40 DTP. <br>
+	New charachers get 1,000 XP at the time of character creation. <br>
+	New characters have 280 GP to aquire starting gear. <br>
+</code></p>
+<hr>
+
+<div id="score" class="center">
+	<h2>Physical Scores</h2>
+	<div class="stats">
+		<div class="abilityScores">
+			<h4>
+				<p class="score str"><br><strong>30</strong> +10</p> STR
+			</h4>
+
+			<h4>
+				<p class="score dex"><br><strong>16</strong> +3</p> DEX
+			</h4>
+
+			<h4>
+				<p class="score con"><br><strong>30</strong> +10</p> CON
+			</h4>
+
+		</div>
+	</div>
+
+	<h2>Mental Scores</h2>
+	<div class="stats">
+		<h4>
+			<p class="score int"><br><strong>25</strong> +7</p> INT
+		</h4>
+
+		<h4>
+			<p class="score wis"><br><strong>23</strong> +6</p> WIS
+		</h4>
+
+		<h4>
+			<p class="score cha"><br><strong>30</strong> +10</p> CHA
+		</h4>
+	</div>
+</div>
+<p>Ability Scores generally should never exceed 30 and by defaualt have a max of 20.</p>
+<ul>
+	<li>Strength | STR</li>
+	<li>Dexterity | DEX</li>
+	<li>Constitution | CON</li>
+	<li>Intelligence | INT</li>
+	<li>Wisdom | WIS</li>
+	<li>Charisma | CHA</li>
+</ul>
+<p>New characters use point buy.</p>
+<h2 id="skill">Skills</h2>
+<strong>Strength</strong>
+<ul>
+	<li>Athletics</li>
+	<li>Grapple</li>
+</ul>
+<strong>Dexterity</strong>
+<ul>
+	<li>Acrobatics</li>
+	<li>Sleight of Hand</li>
+	<li>Stealth</li>
+</ul>
+<strong>Intelligence</strong>
+<ul>
+	<li>Arcana</li>
+	<li>History</li>
+	<li>Investigation</li>
+	<li>Nature</li>
+	<li>Religion</li>
+</ul>
+<strong>Wisdom</strong>
+<ul>
+	<li>Animal Handling</li>
+	<li>Insight <i> - How honest does a person seem?</i></li>
+	<li>Medicine <i> - Can I stabalize this wound or diagnose this alement?</i></li>
+	<li>Perception <i> - Do I see that thing?</i></li>
+	<li>Survival <i> - Can I make a campfire?</i></li>
+</ul>
+<strong>Charisma</strong>
+<ul>
+	<li>Deception</li>
+	<li>Intimidation</li>
+	<li>Performance</li>
+	<li>Persuasion</li>
+</ul>
+
+<h2 id="currensy">Currencies</h2>
+<h3 id="dtp">DTP 🔴</h3>
+<p><strong>Down Time Points (DTP)</strong> - Roll against encounter tables.</p>
+<p>1 DTP is 1 hour of down time.</p>
+<p>Downtime activities are instantly accomplished but the DM may wait until the next session to resolve them if the
+	logistics are time consuming: keep the game rolling, down time activities are lower priority. Examples include:</p>
+<ul>
+	<li>Carousing or Relaxation - Default activity. Spend time between sessions relaxing</li>
+	<li>Crafting - make non-magical items (herbalism, smithing, alchemy, weaving, etc.)</li>
+	<li>Construction - Build buildings like houses, shops, and airships (this will often cost in materials or gp,
+		permits or gp, and land or gp)
+	</li>
+	<li>Research & Investigation - Learn more about a subject or substance or uncover secrets related to something from
+		a prior session
+	</li>
+	<li>Practicing a Profession - Work a job or serve at a temple or manage a buisness</li>
+	<li>Training - Aquire new skills, ability scores, or features from a teacher</li>
+</ul>
+<div class="center">
+
+	<img style="height: 200px; width: auto; border-radius: 8px;"
+		 src="https://github.com/Zbeyer/Nora/raw/master/assets/1%20DTP%20256.jpg" alt="">
+</div>
+<hr>
+<h3 id="xp">XP 🟢</h3>
+<p>
+	<strong>Experianc XP</strong> - Is a magic currency to unlock upgrades and infuse them into items called power
+	stones.
+</p>
+<p>Player Characters (PCs) can only unlock features and spells at or below a class level they have unlocked.</p>
+<p>Player Characters (PCs) can then infuse unlocked fatures and spells into the power stones of their gear.</p>
+<p>NPCs can buy and sell XP as well as PCs earn it.</p>
+<p>Power stones have a limit to how many spells, keywords, boons, features, etc. that can be infused into them.</p>
+<p>Features, keywords, enhancemets (+1 modifiers), etc. infused into a power stone is called an infusion.</p>
+<li>You may only infuse things you have unlocked.</li>
+<p>No additional hit dice are given when leveling. Instead a feature can be infused into a power stone to increase max
+	health of the user (see rule below).</p>
+
+<p><i>Numbers still being play tested.</i></p>
+<div class="table-container">
+	<table class="gear-table">
+		<thead>
+		<tr>
+			<th>Class Level</th>
+			<th>XP to unlock</th>
+			<th>Proficiency</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>1</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>120</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>2</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>2</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>240</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>2</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>3</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>300</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>2</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>4</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>500</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>2</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>5</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>1,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>3</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>6</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>1,250</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>3</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>7</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>2,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>3</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>8</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>3,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>3</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>9</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>4,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>4</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>10</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>5,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>4</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>11</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>10,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>4</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>12</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>20,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>4</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>13</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>30,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>5</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>14</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>40,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>5</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>15</code></h2>
+				</div>
+			</td>
+
+			<td>
+				<div class="center">
+					<code>50,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>5</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>16</code></h2>
+				</div>
+			</td>
+
+			<td>
+				<div class="center">
+					<code>55,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>5</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>17</code></h2>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<code>60,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>6</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>18</code></h2>
+				</div>
+			</td>
+
+			<td>
+				<div class="center">
+					<code>70,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>6</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>19</code></h2>
+				</div>
+			</td>
+
+			<td>
+				<div class="center">
+					<code>80,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>6</code></h2>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="center">
+					<h2><code>20</code></h2>
+				</div>
+			</td>
+
+			<td>
+				<div class="center">
+					<code>90,000</code>
+				</div>
+			</td>
+			<td>
+				<div class="center">
+					<h2><code>6</code></h2>
+				</div>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+	<ul>
+		<li>Your maximum health can add your Constution or <code>CON</code> modifer multiplied by two and the highest
+			class level you have unlocked.
+		</li>
+		<li>Additional maximum health can be infused for <code>10 XP</code> each.</li>
+		<li>All heath upgrades are a single infusion regarless how much maximum health it grants. A +50 HP helmit used
+			one infusion. Additional maximum health can be infused to the without removing the infusion i.e. the +50 HP
+			gear can be +60 HP for <code>100 XP</code>.
+		</li>
+		<li>Removing an infuusion costs <code>100 XP</code>.</li>
+		<li>Each enhancemet (+1 modifier) is an infusion. i.e. a +3 weapon is three +1 infusions. +5 armor is 5
+			infusions. Etc.
+		</li>
+		<li>Infusion generally costs <code>100 XP</code> unless othwise specified. Infusion does not require assisetance
+			from any character (PC or NPC).
+		</li>
+		<li>Whoever is wearing or using the item with the infused power stone has access to those infusions.</li>
+		<li>Saving throws can be infused into a power stone at a cost of 25 XP per type of throw. Saving throws have no
+			relation to class. All PCs have all saving throws unlockeded. A power stone that grants saving throws to
+			Stregnth, Constitution, and Dexterity uses 3 infusions (one for each saving throw).
+		</li>
+		<li>Spells are unlocked at a cost of <code>10 XP</code> per level, cantrips cost <code>5 XP</code>. You may only
+			infuse spells from a class list you have unlocked. i.e. You can only take warloco spells if you have the
+			warlock class unlocked to 1
+		</li>
+		<li>You can infuse spells without slots to use them. It seems foolish but you can do it.</li>
+		<li>Spell slots are not on the character, they are infused into the power stone. Spell slots are inused into a
+			stone at the cost of <code>100 XP</code> per level. A single spell slot is an infusion. Spell slots can be
+			up to 9th level without costing an additional infusion. A power stone can there for have magic missile
+			infused and two three first level spell slots, two second level, and a third level for a total of seven
+			infusions.
+		</li>
+		<li>Expened spell slots regenerate after a 1hr.</li>
+
+		<li>Proficency is set by the highest class level you have unlocked.</li>
+		<li>You may unlock ability scores increases or character features for <code>100 XP</code>.</li>
+		<p>Each point an ability score reaches above 30 also adds 1 to insanity.</p>
+		<p>insanit is applied as a negative on every roll.</p>
+		<li>Epic boons can be unlocked after a class reaches 20 for <code>100,000 XP</code> each.</li>
+	</ul>
+	<hr>
+	<h3 id="gp">GP 🔵</h3>
+	<p><strong>Money</strong> - trade between NPCs.</p>
+	<div class="center">
+		<img style="height: 200px; width: auto; border-radius: 8px;"
+			 src="https://github.com/Zbeyer/Nora/raw/master/assets/3%20GP%20256.jpg" alt="">
+	</div>
+	<ol>
+		<li>CP - copper pieces (1 dram)</li>
+		<li>SP - silver pieces (1 dram)</li>
+		<strong>
+			<li>GP - gold pieces (1 dram)</li>
+		</strong>
+		<li>PP - platinum pieces (1 dram)</li>
+	</ol>
+	<p>Prices are often measured in GP but other precious metals are accepted. Silver is 1/10 the valu of gold and
+		copper 1/10 the value of silver. Platinum is 10x the value of gold. So like vanilla DnD. 10:1 carries across the
+		main coins CP | SP | GP | PP.</p>
+	<p>Banks give different interest rates depending on what you do. A normal account might have a 2% interest rate per
+		year but a CD might be 6%. Managing money is important. DM's can roll or decide if investments were good or
+		bad.</p>
+	<p>Loans also have differrent interest rates, and thieves guild loans are even more risk / reward.</p>
+	<p>Selling magic items is usualally the value of the powerstone +25 GP for each infuion.</p>
+	<p>Buying magic items is much more expensive. It is common to see prices 100x the sell value. Haggling merchants
+		down from listed price is hard but not impossible.</p>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhdmg1n-3d3e8837-4d0a-4e29-8f5c-e9da49c2d942.jpg/v1/fit/w_512,h_512,q_70,strp/treasure_2_by_wurmboy2_dhdmg1n-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvMDc1ODZiZjgtMTA0Zi00ODc0LTkxODYtNTFkYThkYzQ2ZjZjXC9kaGRtZzFuLTNkM2U4ODM3LTRkMGEtNGUyOS04ZjVjLWU5ZGE0OWMyZDk0Mi5qcGciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.43WF1HM6YPbHtGalJULzw4bGojoXpiATVNrlh0iR4Nk"
+			 alt="">
+	</div>
+	<p>Coin rolls and written statements are commonly used by banks and merchants that transfer a large volume of
+		Valuables. It is safe to assume trades of more than 500 GP in value starts with a contract.</p>
+
+	<h1>Service Robots</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhdmauz-c77ff140-124f-4078-99a1-6ab4dcab4d70.jpg/v1/fill/w_1182,h_676,q_70,strp/guardiorbs_by_wurmboy2_dhdmauz-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvMDc1ODZiZjgtMTA0Zi00ODc0LTkxODYtNTFkYThkYzQ2ZjZjXC9kaGRtYXV6LWM3N2ZmMTQwLTEyNGYtNDA3OC05OWExLTZhYjRkY2FiNGQ3MC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.w9yujs8OJCAJeFNpH_2_BVP6rYmoiFav7oXj9vqNnKI"
+			 alt="">
+	</div>
+	<p>Commoners often have constructs or robots follow them with power stones to do things like prestidigitation, magic
+		missile, or extra dimensional storage.</p>
+	<p>These bots whether they fly or walk are often used as inventory storage and a coin purse as well as protection.
+		Robots thend to continue fighting long after their owner dies.</p>
+	<p>Robots can be installed with custom firearms. It is not impossible for a robot to have a minigun that shoots 10
+		times per attack and/or a rocket launcher that uses a large projectile on par with a fireball.</p>
+	<p>Robots can be aquired from artisians and are considered pets regardless of intelligence. A warforged is legally a
+		pet. Sentient machines avoid cities for this reason.</p>
+	<p>Robots often have powerstones with spells and spell slots infused.</p>
+	<p>Robots consume on average 1 leter of Sparkle Dew a month.</p>
+	<p>There is no limit to how many pets you may have but more than three may raise eybrows.</p>
+
+	<h1>Sparkle Refinery</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/di2gybi-acc22878-f66e-4133-9dd4-aee346088a85.jpg/v1/fill/w_1183,h_676,q_70,strp/spakle_dew_process_by_wurmboy2_di2gybi-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGkyZ3liaS1hY2MyMjg3OC1mNjZlLTQxMzMtOWRkNC1hZWUzNDYwODhhODUuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.HwK2PBBztJ4tmEHAUzqq3LF8rInQShrrKjHGftcM8N0"
+			 alt="">
+	</div>
+	<p>Fuel refineries make Sparkle Dew consumed by robots, magitech, vehicles, and pretty much all machines. Sparkle
+		Dew is highly flamable. Probably even explosive.</p>
+
+	<h1>Glimmer Refinery</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/di2gyd6-9484eca6-82ab-424f-aee5-f90ef7e56d3c.jpg/v1/fill/w_1183,h_676,q_70,strp/glimmer_water_process_by_wurmboy2_di2gyd6-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGkyZ3lkNi05NDg0ZWNhNi04MmFiLTQyNGYtYWVlNS1mOTBlZjdlNTZkM2MuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.CznzZBfG2P61hgiDcWFhotF-BTPhpA3KowA6SX5pvP0"
+			 alt="">
+	</div>
+	<p>Glimer refineries make glimmer water wich is used to keep magitec running. Glimmer water is effectively liquid
+		magic.</p>
+	<p> Magic items consume it in very small doses but since the average person has 3 or more magic items tons are
+		shipped out. The average person consumes one fluid ounce every six months. </p>
+	<p>Workers avoid speaking in common or elvish around it. many work in silence. Refinery wo don't want to
+		accidentally invoke a spell.</p>
+
+	<h1>Elemental Salts</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/di2gtof-3ff2b230-f109-47ae-9328-62bff138b898.png/v1/fit/w_658,h_768/s01_by_wurmboy2_di2gtof-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzY4IiwicGF0aCI6IlwvZlwvMDc1ODZiZjgtMTA0Zi00ODc0LTkxODYtNTFkYThkYzQ2ZjZjXC9kaTJndG9mLTNmZjJiMjMwLWYxMDktNDdhZS05MzI4LTYyYmZmMTM4Yjg5OC5wbmciLCJ3aWR0aCI6Ijw9NjU4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.1gnhdMcNTbKFGrD1mingQl8lh8BdtOQZWNfjdq9s5cE"
+			 alt="">
+		<p>Refieneries buy a lot of salts. Most creature parts have a buyer.</p>
+	</div>
+
+	<h1>Intelligent Nothics</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhsub9o-fdf11e72-9c08-4d04-87fe-1f0c443eefb6.jpg/v1/fill/w_1183,h_676,q_70,strp/nothic_a_by_wurmboy2_dhsub9o-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGhzdWI5by1mZGYxMWU3Mi05YzA4LTRkMDQtODdmZS0xZjBjNDQzZWVmYjYuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.oFLFp0c_QGuWv4BYDT_xPqFrSuNjjtmuisUyjKJm44w"
+			 alt="">
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhsub9y-4e07f722-df59-4c6a-886f-7090dbe918b7.jpg/v1/fill/w_1183,h_676,q_70,strp/nothic_b_by_wurmboy2_dhsub9y-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGhzdWI5eS00ZTA3ZjcyMi1kZjU5LTRjNmEtODg2Zi03MDkwZGJlOTE4YjcuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.PP9ONx8IYslc8S6blY9Gt-Wb9Gigkk48sM-pOp7wBj0"
+			 alt="">
+	</div>
+	<div class="center">
+		<p>Most of the time Nothics turn into anamalistic monsters. Once in a while the personality of the wizard is
+			intact.</p>
+	</div>
+
+	<h1>Mega structures</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhgjb3j-cbd37563-c608-438c-be00-f322dadc94fd.jpg/v1/fill/w_1183,h_676,q_70,strp/megastructure_k_by_wurmboy2_dhgjb3j-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGhnamIzai1jYmQzNzU2My1jNjA4LTQzOGMtYmUwMC1mMzIyZGFkYzk0ZmQuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.ya3HaaupQz8TpzZYPBhOmty6labN-vOPmKlpYP3aQEw"
+			 alt="">
+		<p>Cities tend to feature big buildings that hold residential condos and shops</p>
+	</div>
+
+	<h1>Air Cruisers</h1>
+	<div class="center">
+		<img class="world-building"
+			 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhhm2no-e92166d7-9059-4ce6-b71d-c34b14fa3969.jpg/v1/fill/w_1183,h_676,q_70,strp/untitled_by_wurmboy2_dhhm2no-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGhobTJuby1lOTIxNjZkNy05MDU5LTRjZTYtYjcxZC1jMzRiMTRmYTM5NjkuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.D_cdwExDGCTxbuixMF6v8y3OP_ZZozGP85uDefI2c08"
+			 alt="">
+		<p>Nations keep cruisers in their militatry arsonal.</p>
+
+		<h1>Flying Cities</h1>
+		<div class="center">
+			<img class="world-building"
+				 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhsna1p-25d037b0-aa0a-4584-9d68-7ef9b564881e.jpg/v1/fill/w_1183,h_676,q_70,strp/floating_smithy_by_wurmboy2_dhsna1p-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGhzbmExcC0yNWQwMzdiMC1hYTBhLTQ1ODQtOWQ2OC03ZWY5YjU2NDg4MWUuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.tp8n2v0lYmkQhUZcQAr3HzMRNAqnKHraqS1mjb2k4nI"
+				 alt="">
+			<p>Nations have flying cities that are only accessible by air ship. They have a lot of defenses to guard
+				against piracy.</p>
+
+			<h1>Arcane Slimes</h1>
+			<div class="center">
+				<img class="world-building"
+					 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhdm96g-7ba8052a-43d1-4154-a9d9-87a3778f33f3.jpg/v1/fill/w_1225,h_700,q_70,strp/arcane_slime_by_wurmboy2_dhdm96g-350t-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvMDc1ODZiZjgtMTA0Zi00ODc0LTkxODYtNTFkYThkYzQ2ZjZjXC9kaGRtOTZnLTdiYTgwNTJhLTQzZDEtNDE1NC1hOWQ5LTg3YTM3NzhmMzNmMy5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.-zFj4q5JuwQCjAQa8yqzwGhED1f792lg7NBL-vwHukg"
+					 alt="">
+				<p>When magic polution is prevolent it condeses into arcane slimes.</p>
+
+				<h1>Netherforge Liches</h1>
+				<div class="center">
+					<img class="world-building"
+						 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhdmbq6-c366191a-c274-4426-a13d-13703473e716.jpg/v1/fill/w_1182,h_676,q_70,strp/netherforge_technolich_by_wurmboy2_dhdmbq6-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvMDc1ODZiZjgtMTA0Zi00ODc0LTkxODYtNTFkYThkYzQ2ZjZjXC9kaGRtYnE2LWMzNjYxOTFhLWMyNzQtNDQyNi1hMTNkLTEzNzAzNDczZTcxNi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.P59Kiy0Ds4Oxn5xkvR0GiOgw-GBX_MNpbKBAzHIVI1g"
+						 alt="">
+					<p>Undead and constructs often are commanded by a netherforge lich.</p>
+
+					<h1>Gear</h1>
+
+					<h2>Head</h2>
+					<div class="flex">
+						<div class="slot-outer">
+							<div id="head" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p><i>head</i></p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="face" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p><i>head</i></p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="2" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Ear R</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="3" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Ear L</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="4" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Neck</p>
+							</div>
+						</div>
+					</div>
+
+					<h2>Body</h2>
+					<div class="flex">
+						<div class="slot-outer">
+							<div id="5" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Back</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="5" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>ephemera</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="6" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Torso</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="7" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Sholder R</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="8" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Sholder L</p>
+							</div>
+						</div>
+					</div>
+
+					<h2>Arms</h2>
+					<div class="flex">
+						<div class="slot-outer">
+							<div id="9" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Wrist R</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="10" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Wrist L</p>
+							</div>
+						</div>
+
+						<div class="slot-outer">
+							<div id="11" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Ring R</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="12" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Ring L</p>
+							</div>
+						</div>
+					</div>
+
+					<h2>Lower</h2>
+					<div class="flex">
+						<div class="slot-outer">
+							<div id="13" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Legs</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="14" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Shin R</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="14" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Shin L</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="15" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Foot R</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="16" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Foot L</p>
+							</div>
+						</div>
+					</div>
+					<h2>Misc.</h2>
+					<div class="flex">
+						<div class="slot-outer">
+							<div id="17" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Weapon</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="17" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Foci</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="18" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Ammo</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="19" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Bag</p>
+							</div>
+						</div>
+						<div class="slot-outer">
+							<div id="19" class="item-slot">
+							</div>
+							<div class="slot-name">
+								<p>Sheild</p>
+							</div>
+						</div>
+					</div>
+					<p><strong>Note</strong>
+						<i>
+							A single body cannot use more than 8 + their Intelligence modifier in power / magic items.
+							Many items take up competing space (boots cover shins and feet for example).
+						</i>
+					</p>
+					<p>Every Item can be upgraded based on the quality of the power / magic stone. Players can spend GP
+						(gold pieces) to upgragde the gem at any artificer and then XP to add new features to gear.</p>
+
+					<h1>Items</h1>
+					<h2>Weapons</h2>
+					<div class="table-container">
+						<table class="gear-table">
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Image</th>
+								<th>Descrption</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									<h2>Revolver</h2>
+								</td>
+								<td><img class="gear" src="https://i.imgur.com/s1zpEgv.jpeg" alt=""></td>
+								<td>6 shot cylendar. 1d6 piercing per shot. Stealth is broken when fired. <strong>Reload
+									6</strong>. <i>Dual weilding allows simultanious fire (two shots instead of one)</i>.
+								</td>
+							</tr>
+							</tbody>
+							<tbody>
+							<tr>
+								<td>
+									<h2>Riffle</h2>
+								</td>
+								<td><img class="gear" src="https://i.imgur.com/X6Q4CE2.jpeg" alt=""></td>
+								<td>30 shot magazine. 1d6 piercing per shot. Stealth is broken when fired. <strong>Reload
+									30</strong>.
+								</td>
+							</tr>
+							</tbody>
+							<tbody>
+							<tr>
+								<td>
+									<h2>Arcanes</h2>
+								</td>
+								<td><img class="gear" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/07586bf8-104f-4874-9186-51da8dc46f6c/dhjawhe-77f9a9b4-b2ec-4407-b97e-3e9ea822af27.jpg/v1/fill/w_1183,h_676,q_70,strp/rapier_c_by_wurmboy2_dhjawhe-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzA3NTg2YmY4LTEwNGYtNDg3NC05MTg2LTUxZGE4ZGM0NmY2Y1wvZGhqYXdoZS03N2Y5YTliNC1iMmVjLTQ0MDctYjk3ZS0zZTllYTgyMmFmMjcuanBnIiwid2lkdGgiOiI8PTE3OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qEt5Rmi9Ymd2JXGi923wgoqcmfrZh8gX95YBWHj7vnw
+" alt=""></td>
+								<td>Traditional weapons like swords and bows. Can be upgraded to hold more keywords
+									(like flame tongue) by installing or upgrading power stones.
+								</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<p>Crossbow feats apply to firearms, bow feats do not.</p>
+
+					<h1>Alchemy Instructions</h1>
+					<div class="center">
+						<img class="world-building" src="https://i.imgur.com/E1XhjmE.jpeg" alt="">
+					</div>
+					<p>Use natiure to find and harvest plants</p>
+					<p>Color determines potion tyoe, Example red is a health potion.</p>
+					<ol>
+						<li>Get Lumin Essence</li>
+						<li>Infuse a plant in the essance like tea (takes 12h) to get a T1 potion.</li>
+						<li>Use the previous potion to infuse another plant to get a stronger potion.</li>
+						<li>Keep using lower potions and plants until the potion is the Tier you want.</li>
+					</ol>
+					<p>There are many colors of plants. Red is for HP, Blue for spell slots.</p>
+
+					<h2>Transport</h2>
+
+					<div class="table-container">
+						<table class="gear-table">
+							<thead>
+							<tr>
+								<th>Name</th>
+								<th>Image</th>
+								<th>Descrption</th>
+								<th>Cost</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>
+									<h2>Osprey</h2>
+								</td>
+								<td><img class="gear" src="https://i.imgur.com/062mPq4.jpeg" alt=""></td>
+								<td>Fast deployment</td>
+								<td>varies</td>
+							</tr>
+							<tr>
+								<td>
+									<h2>Tank</h2>
+								</td>
+								<td><img class="gear" src="https://i.imgur.com/pMgDHqT.jpeg" alt=""></td>
+								<td>Slow. Armored heavy vehicle</td>
+								<td>varies</td>
+
+							</tr>
+							<tr>
+								<td>
+									<h2>Train</h2>
+								</td>
+								<td><img class="gear" src="https://i.imgur.com/ejc0USk.jpeg" alt=""></td>
+								<td>Inexpensive transort. Cargo delivery.</td>
+								<td>Varies. usually 1cp per mile.</td>
+							</tr>
+							<tr>
+								<td>
+									<h2>Airship</h2>
+								</td>
+								<td><img class="gear" src="https://i.imgur.com/KCDhatH.jpeg" alt=""></td>
+								<td>Luxurious transport. Ignores dangous terrain.</td>
+								<td>Varies. usually 1sp per mile.</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<h1>Language</h1>
+					<p>Common - The Language of every day peolple</p>
+					<p>Elvish - The Language of mortal magic, dragons, and fae decendants</p>
+					<p>Fay - The languge of Fairies an sprites</p>
+					<p>Foulspawn - The language of Goblins, Orks, and Trolls</p>
+					<p>Arcane - The language of Angels, Devils, Abberations, and Demons</p>
+					<p>Dwarvish - The language of Dwarves, Gnomes, and Halflings</p>
+
+				</div>
+				<div id="sheet" class="tab-content">
+					<div id="character-list">
+						Character List
+					</div>
+					<div id="character-sheet">
+						Sheet
+					</div>
+				</div>
+				<div id="cards" class="tab-content">
+					<section>
+						<p>
+							All ammo can be sold as bullets for firearms, arrows for bows, or bolts for crossbows.
+						</p>
+					</section>
+					<div id="all-cards">
+					</div>
+				</div>
+				<div id="all-cards"></div>
+				<section>
+					<p> Keywords are unlocked once and added to the list of things your character can infuse.
+					</p>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+
