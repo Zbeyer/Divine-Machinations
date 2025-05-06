@@ -4,7 +4,7 @@
 
 - Container(s) https://galaxy-beta.meteor.com/zbomb/us-east-1/apps/machinations.meteorapp.com/overview
 
-- Demo [machinations](machinations.meteorapp.com)
+- Demo [machinations](https://machinations.meteorapp.com)
 
 - Repo https://github.com/Zbeyer/Divine-Machinations
 
