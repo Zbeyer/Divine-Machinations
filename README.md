@@ -1,10 +1,12 @@
 # Divine-Machinations
 
-- https://galaxy-beta.meteor.com/zbomb/us-east-1/apps
+- Apps https://galaxy-beta.meteor.com/zbomb/us-east-1/apps
 
-- https://galaxy-beta.meteor.com/zbomb/us-east-1/apps/machinations.meteorapp.com/overview
+- Container(s) https://galaxy-beta.meteor.com/zbomb/us-east-1/apps/machinations.meteorapp.com/overview
 
-- [machinations](machinations.meteorapp.com)
+- Demo [machinations](machinations.meteorapp.com)
+
+- Repo https://github.com/Zbeyer/Divine-Machinations
 
 ```bash
 meteor deploy machinations
