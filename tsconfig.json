@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "CommonJS",
+		"strict": true,
+		"allowJs": true,
+		"moduleResolution": "Node",
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	},
+	"include": ["server/**/*", "client/**/*", "imports/**/*"],
+	"exclude": ["node_modules"]
+}

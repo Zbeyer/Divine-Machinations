@@ -1,3 +1,5 @@
+import Phaser from 'phaser';
+import { Meteor } from 'meteor/meteor';
 G_Cards = [
 	{
 		rank: "-",
