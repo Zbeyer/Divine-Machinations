@@ -1,0 +1,16 @@
+.accordion-container {
+	width: 100%;
+	border: 1px solid var(--gold);
+	background-color: white;
+	padding: 2px;
+	margin: 3em 0 auto;
+}
+
+.accordion-container h2 {
+	color: black;
+	font-size: 24px;
+}
+
+.accordion-panel true {
+	display: block;
+}

@@ -1,0 +1,17 @@
+<template name="accordion">
+	<div class="accordion-container">
+<h2>
+	{{name}}
+	{{#if state}}
+		&#8964;
+	{{else}}
+		&#9654;
+	{{/if}}
+</h2>
+		{{#if state}}
+			<div class="accordion-panel {{state}}">
+				{{> UI.contentBlock}}
+			</div>
+		{{/if}}
+	</div>
+</template>
