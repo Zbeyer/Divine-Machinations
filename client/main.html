@@ -1,13 +1,8 @@
 <head>
 	<title>Divine Machinations</title>
 </head>
-
-<body>
-<h1>Divine Machinations</h1>
-<i class="fa fa-user"></i>
-<h2>
-	A D&D Module
-</h2>
+<body lang="en">
+{{> header}}
 {{#accordion name="Cards" }}
 	<article>
 		<section>
@@ -39,13 +34,7 @@
 				<button onclick="tab('sheet')">Sheet</button>
 				<button onclick="tab('cards')">Cards</button>
 			</div>
-			<p>This content is independently created and is not affiliated with, nor has it been authorized, sponsored,
-				or otherwise
-				approved by Wizards of the Coast.</p>
-			<p>Periodically you may see references to Nora. <a href="https://github.com/Zbeyer/Nora/blob/master/Nora.md"
-															   target="_blank">Nora</a>, was the first incarnation of
-				this homebrew.
-			</p>
+
 			<hr>
 			<p><i>Numbers are still being playtested</i></p>
 			<br>
@@ -1146,6 +1135,8 @@
 {{#accordion name="games"}}
 	{{> alchemy}}
 {{/accordion}}
+
+{{> footer}}
 </body>
 
 

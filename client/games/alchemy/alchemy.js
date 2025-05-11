@@ -19,35 +19,39 @@ class Preloader extends Phaser.Scene {
 	}
 }
 
-Meteor.startup(() => {
+const makeGame = function () {
 	const config = {
-		title: 'Alchemy',
-		parent: 'alchemy-container', // Ensures Phaser attaches to this div
+		title: "Alchemy",
+		parent: "alchemy-container",
 		type: Phaser.WEBGL,
-		backgroundColor: '#102030',
+		backgroundColor: "#102030",
 		render: {
 			antialiasGL: false,
 			pixelArt: true,
 		},
 		scale: {
 			mode: Phaser.Scale.ScaleModes.NONE,
-			height: 640, // 480,
-			width: 640, //480,
+			width: 640,
+			height: 640,
 		},
 		callbacks: {
 			postBoot: () => {
-
+				console.log("Phaser initialized in the correct container.");
 			},
 		},
 		canvasStyle: `display: block; width: 100%; height: 100%;`,
 		autoFocus: true,
 		audio: {
 			disableWebAudio: false,
-		}
-
+		},
 	};
+
 	let game = new Phaser.Game(config);
 	game.scene.add('Boot', BootScene);
 	game.scene.add('Preloader', Preloader);
 	game.scene.start('Boot');
-});
+};
+
+Template.alchemy.rendered = function () {
+	makeGame();
+}
