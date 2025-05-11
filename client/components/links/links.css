@@ -1,0 +1,29 @@
+
+button {
+	font-size: 1.25em;
+	font-weight: bold;
+	border-radius: 0.5em;
+	border: none;
+	margin: 1em;
+
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: transparent;
+	color: var(--linkColor);
+	border: 3px solid var(--linkColor);
+}
+
+button,
+a,
+button:visited,
+a:visited,
+button:active,
+a:active {
+	color: var(--linkColor);
+}
+button:hover,
+a:hover {
+	color: var(--linkHoverColor);
+}
