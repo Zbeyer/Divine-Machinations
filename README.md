@@ -225,64 +225,28 @@ Server.Meteor.method-->Database.query
 ### Client
 
 ```js
-const makeNewUser = function (event) {
-	event.preventDefault();
-
-	let usernameInput = document.getElementById("register-username");
-	let emailInput = document.getElementById("register-email");
-	let passwordInput = document.getElementById("register-password");
-
-	if (!usernameInput || !emailInput || !passwordInput) {
-		console.error("One or more input fields are missing from the DOM.");
-		return;
-	}
-
-	let username = usernameInput.value;
-	let email = emailInput.value;
-	let password = passwordInput.value;
-
-	if (!(username || email || password)) {
-		console.error("One or more input fields are empty.");
-		return;
-	}
-
-	Meteor.call("registerUser", { username: username, email: email, password: password }, function (error, result) {
-		if (error) {
-			console.error("Registration failed: %o", error);
-			return;
-		}
-		alert("User registered successfully! User ID: " + result);
-	});
-};
+Meteor.call("registerUser", { username: username, email: email, password: password }, function (error, result) {
+//...
 ```
-
-
 
 ### Server
 
 ```js
 Meteor.methods({
 	async registerUser(userData) {
-		check(userData, {
-			username: String,
-			email: String,
-			password: String
-		});
+//...
+```
 
-		const existingUser = await Meteor.users.findOneAsync({ "emails.address": userData.email });
+### Query
 
-		if (existingUser) {
-			throw new Meteor.Error(403, "Email is already in use.");
-		}
-
-		const userId = Accounts.createUser({
-			username: userData.username,
-			email: userData.email,
-			password: userData.password
-		});
-
-		return userId; // Returns the new user's ID
-	}
+```js
+//...
+const existingUser = await Meteor.users.findOneAsync({ /
+const userId = Accounts.createUser({
+    username: userData.username,
+    email: userData.email,
+    password: userData.password
 });
+//...
 ```
 
