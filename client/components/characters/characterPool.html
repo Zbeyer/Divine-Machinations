@@ -1,0 +1,12 @@
+<template name="characterPool">
+	{{#if currentUser}}
+		<h2>Available Characters</h2>
+		<ul>
+			{{#each char in characterList}}
+				<p>{{>character char}}</p>
+			{{/each}}
+		</ul>
+	{{else}}
+		<p>Login to access the character pool.</p>
+	{{/if}}
+</template>

@@ -31,11 +31,11 @@ button:hover {
 
 /* Logout & Toggle Buttons */
 .logout-button, .toggle-auth-button {
-	background-color: #dc3545;
+	background-color: #235;
 	color: white;
 }
 
 .logout-button:hover, .toggle-auth-button:hover {
-	background-color: #a71d2a;
+	background-color: #358;
 	color: white;
 }

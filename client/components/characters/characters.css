@@ -1,0 +1,43 @@
+/* General Layout */
+.character {
+	background: #f4f1de;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid #8b5a2b;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+	max-width: 400px;
+	margin: auto;
+	text-align: center;
+	font-family: 'Garamond', serif;
+}
+
+/* Character Name Styling */
+.character h2 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #5a3e1b;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+/* Stat Grid */
+.character-scores {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+	justify-items: center;
+}
+
+
+/* Stat Colors */
+.str { background-color: #b22222; } /* Strength - Red */
+.dex { background-color: #228b22; } /* Dexterity - Green */
+.con { background-color: #8b4513; } /* Constitution - Brown */
+.int { background-color: #4169e1; } /* Intelligence - Blue */
+.wis { background-color: #6a5acd; } /* Wisdom - Purple */
+.cha { background-color: #ff8c00; } /* Charisma - Orange */
+
+/* Parchment Effect */
+.character {
+	background: linear-gradient(to bottom, #f4f1de, #e3dac9);
+}

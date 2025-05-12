@@ -1,10 +1,10 @@
 const loginUser = function loginUser(email, password) {
 	Meteor.loginWithPassword(email, password, function (error) {
-		if (error) {
-			console.error("Login failed:", error.reason);
-		} else {
-			console.log("Login successful!");
-		}
+		// if (error) {
+		// 	console.error("Login failed:", error.reason);
+		// } else {
+		// 	console.log("Login successful!");
+		// }
 	});
 }
 
