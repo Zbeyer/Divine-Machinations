@@ -1,0 +1,31 @@
+<template name="login">
+	<article>
+		<section>
+			{{#if currentUser}}
+				<h2>
+					<p>Hello {{currentUser.username}}</p>
+				</h2>
+				<button class="logout-button">Logout</button>
+			{{else}}
+				<p>Please login or register.</p>
+				<button class="toggle-auth-button">
+					{{#if isRegistering}}Go to Login{{else}}Go to Register{{/if}}
+				</button>
+				{{#if isRegistering}}
+					{{> register}}
+				{{else}}
+					<h2>Login</h2>
+					<form id="loginForm">
+						<label for="login-username">Username:</label>
+						<input type="text" id="login-username" autocomplete="username" name="username" required>
+
+						<label for="login-password">Password:</label>
+						<input type="password" id="login-password" autocomplete="password" name="password" required>
+
+						<button type="submit">Login</button>
+					</form>
+				{{/if}}
+			{{/if}}
+		</section>
+	</article>
+</template>

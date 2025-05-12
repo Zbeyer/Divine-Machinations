@@ -1,0 +1,41 @@
+/* Form Styling */
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+/* Input Fields */
+input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+/* Buttons */
+button {
+	background-color: #007bff;
+	color: white;
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+/* Logout & Toggle Buttons */
+.logout-button, .toggle-auth-button {
+	background-color: #dc3545;
+	color: white;
+}
+
+.logout-button:hover, .toggle-auth-button:hover {
+	background-color: #a71d2a;
+	color: white;
+}
