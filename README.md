@@ -98,3 +98,191 @@ Our reposory is GitHub, this is where we store code
 
 `Server` is a folder that is back end only, database queries go here.
 
+# Patterns
+
+## Front End
+
+```mermaid
+graph LR
+
+template.HTML-->template.TypeScript;
+template.TypeScript-->server.Meteor.methods;
+
+```
+
+#### register.html
+
+```html
+<template name="register">
+	<h2>Register</h2>
+	<form id="registerForm">
+		<label for="register-username">Username:</label>
+		<input type="text" id="register-username" autocomplete="username" name="username" required>
+
+		<label for="register-email">Email:</label>
+		<input type="email" id="register-email" autocomplete="email" required>
+
+		<label for="register-password">Password:</label>
+		<input type="password" id="register-password" autocomplete="password" name="password" required>
+
+		<button type="submit" class="register-button">Register</button>
+	</form>
+</template>
+```
+
+#### Register.js
+
+```js
+const makeNewUser = function (event) {
+	event.preventDefault();
+
+	let usernameInput = document.getElementById("register-username");
+	let emailInput = document.getElementById("register-email");
+	let passwordInput = document.getElementById("register-password");
+
+	if (!usernameInput || !emailInput || !passwordInput) {
+		console.error("One or more input fields are missing from the DOM.");
+		return;
+	}
+
+	let username = usernameInput.value;
+	let email = emailInput.value;
+	let password = passwordInput.value;
+
+	if (!(username || email || password)) {
+		console.error("One or more input fields are empty.");
+		return;
+	}
+
+	Meteor.call("registerUser", { username: username, email: email, password: password }, function (error, result) {
+		if (error) {
+			console.error("Registration failed: %o", error);
+			return;
+		}
+		alert("User registered successfully! User ID: " + result);
+	});
+};
+
+
+Template.register.events({
+	'submit #registerForm': function (event) {
+		makeNewUser(event);
+	},
+	'click .register-button': function (event) {
+		makeNewUser(event);
+	},
+	'keyup input': function (event) {
+		if (event.keyCode === 13 || event.key === "Enter") {
+			makeNewUser(event);
+		}
+	}
+});
+```
+
+#### Accounts.js on the server
+
+```js
+import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/accounts-base';
+import { check } from 'meteor/check';
+
+Meteor.methods({
+	async registerUser(userData) {
+		check(userData, {
+			username: String,
+			email: String,
+			password: String
+		});
+
+		const existingUser = await Meteor.users.findOneAsync({ "emails.address": userData.email });
+
+		if (existingUser) {
+			throw new Meteor.Error(403, "Email is already in use.");
+		}
+
+		const userId = Accounts.createUser({
+			username: userData.username,
+			email: userData.email,
+			password: userData.password
+		});
+
+		return userId; // Returns the new user's ID
+	}
+});
+```
+
+
+
+## Remote Procedure Calls (RPCs)
+
+```mermaid
+graph LR
+
+Client.Meteor.call.function-->Server.Meteor.method;
+Server.Meteor.method-->Database.query
+```
+
+### Client
+
+```js
+const makeNewUser = function (event) {
+	event.preventDefault();
+
+	let usernameInput = document.getElementById("register-username");
+	let emailInput = document.getElementById("register-email");
+	let passwordInput = document.getElementById("register-password");
+
+	if (!usernameInput || !emailInput || !passwordInput) {
+		console.error("One or more input fields are missing from the DOM.");
+		return;
+	}
+
+	let username = usernameInput.value;
+	let email = emailInput.value;
+	let password = passwordInput.value;
+
+	if (!(username || email || password)) {
+		console.error("One or more input fields are empty.");
+		return;
+	}
+
+	Meteor.call("registerUser", { username: username, email: email, password: password }, function (error, result) {
+		if (error) {
+			console.error("Registration failed: %o", error);
+			return;
+		}
+		alert("User registered successfully! User ID: " + result);
+	});
+};
+```
+
+
+
+### Server
+
+```js
+Meteor.methods({
+	async registerUser(userData) {
+		check(userData, {
+			username: String,
+			email: String,
+			password: String
+		});
+
+		const existingUser = await Meteor.users.findOneAsync({ "emails.address": userData.email });
+
+		if (existingUser) {
+			throw new Meteor.Error(403, "Email is already in use.");
+		}
+
+		const userId = Accounts.createUser({
+			username: userData.username,
+			email: userData.email,
+			password: userData.password
+		});
+
+		return userId; // Returns the new user's ID
+	}
+});
+```
+
