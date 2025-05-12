@@ -85,6 +85,7 @@ Repository-->Codebase;
 Codebase-->client;
 Codebase-->lib;
 Codebase-->public;
+Codebase-->private;
 Codebase-->sever;
 ```
 
@@ -95,6 +96,8 @@ Our reposory is GitHub, this is where we store code
 `lib` is a folder that will go in both server and client, helper functions like 1+1=2 that need to work on the front and back ends go here
 
 `Public` is a folder for files that should be public, images go here.
+
+`private`is a folder that can only be easily accessed by the server, put stuff here if you want to use it in the website but only viewable on certain pages. Do NOT recommend using this as key storage because they can be hijacked from the repository with ease.
 
 `Server` is a folder that is back end only, database queries go here.
 
@@ -110,7 +113,7 @@ template.TypeScript-->server.Meteor.methods;
 
 ```
 
-#### register.html
+### register.html
 
 ```html
 <template name="register">
@@ -130,7 +133,7 @@ template.TypeScript-->server.Meteor.methods;
 </template>
 ```
 
-#### Register.js
+### Register.js
 
 ```js
 const makeNewUser = function (event) {
@@ -179,7 +182,7 @@ Template.register.events({
 });
 ```
 
-#### Accounts.js on the server
+### Accounts.js on the server
 
 ```js
 import { Meteor } from 'meteor/meteor';
