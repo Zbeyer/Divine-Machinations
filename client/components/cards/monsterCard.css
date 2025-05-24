@@ -1,0 +1,33 @@
+.monster-card {
+	--primary: #FEC;
+	--secondary: #4a2f16;
+	font-family: "Book Antiqua", "Georgia", "Times New Roman", serif;
+	width: 350px;
+	height: 624px;
+	padding: 5px;
+	background-color: var(--primary);
+	border: 2px solid var(--gold);
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+	/*font-family: 'MedievalSharp', cursive;*/
+	color: var(--secondary);
+	font-size: 16px;
+	text-align: left;
+}
+
+.monster-header {
+	font-size: 24px;
+	background-color: var(--secondary);
+	color: var(--primary);
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+.stat {
+	font-weight: bold;
+}
+
+.monster-description {
+	font-style: italic;
+}

@@ -1,0 +1,32 @@
+<template name="monsterStats">
+	<div class="monster-stats">
+		<span class="stat">Type:</span> {{type}} {{subType}}
+		<br>
+		{{#if darkVision}}<span class="stat">Dark Vision:</span> {{darkVision}} ft{{/if}}
+		{{#if tremorSense}}<span class="stat">Tremor Sense:</span> {{tremorSense}} ft{{/if}}
+		{{#if blindSight}}<span class="stat">Blind Sight:</span> {{blindSight}} ft{{/if}}
+		{{#if trueSight}}<span class="stat">True Sight:</span> {{trueSight}} ft{{/if}}
+		<br>
+		<span class="stat">CR:</span> {{cr}} ({{xp}} XP)<br>
+
+		<span class="stat">AC:</span> {{ac}}
+		<span class="stat">HP:</span> {{hp}} <br>
+
+		{{#if speedWalk}}<span class="stat">Walk:</span> {{speedWalk}} ft{{/if}}
+		{{#if speedClimb}}<span class="stat">Climb:</span> {{speedClimb}} ft{{/if}}
+		{{#if speedFly}}<span class="stat">Fly:</span> {{speedFly}} ft (hover){{/if}}
+		{{#if speedSwim}}<span class="stat">Swim:</span> {{speedSwim}} ft{{/if}}
+		{{#if speedBurrow}}<span class="stat">Burrow:</span> {{speedBurrow}} ft{{/if}}
+		{{#if speedTeleport}}<span class="stat">Teleport:</span> {{speedTeleport}} ft{{/if}}
+		<br>
+		<span class="stat">STR:</span> {{str}} ({{strMod}})
+		<span class="stat">DEX:</span> 14 (+2)
+		<span class="stat">CON:</span> 12 (+1)
+		<br>
+		<span class="stat">INT:</span> 10 (+0)
+		<span class="stat">WIS:</span> 8 (-1)
+		<span class="stat">CHA:</span> 8 (-1)
+		<br>
+		<hr>
+	</div>
+</template>

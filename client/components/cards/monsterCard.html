@@ -1,0 +1,21 @@
+<template name="monsterCard">
+	{{! Card Template }}
+	{{! This template is used to display a card in the deck }}
+	{{! The data context is set to the card object }}
+	{{! The card object contains the following properties: }}
+	{{! - rank: The rank of the card }}
+	{{! - name: The name of the card }}
+	{{! - type: The type of the card }}
+	{{! - sub: The subtype of the card }}
+	{{! - price: The price of the card }}
+	{{! - image: The image of the card }}
+	{{! - description: The description of the card }}
+	{{! Blaze https://guide.meteor.com/v1.2/blaze}}
+	<div class="monster-card">
+		{{> monsterHeader}}
+		{{> monsterStats}}
+		{{> monsterAbilities}}
+		{{> monsterActions}}
+		{{> monsterDescription}}
+	</div>
+</template>
