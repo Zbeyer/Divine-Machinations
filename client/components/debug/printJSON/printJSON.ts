@@ -1,7 +1,7 @@
 import {Template} from 'meteor/templating';
 let printDataAsJSON = function (dataObj: any): string | undefined {
 	if (!dataObj) return;
-	console.log('Printing Debug: %o', dataObj);
+	// console.log('Printing Debug: %o', dataObj);
 	return JSON.stringify(dataObj, null, "\t"); // stringify with tabs inserted at each level
 };
 

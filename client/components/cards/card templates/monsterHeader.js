@@ -1,6 +1,7 @@
 
 Template.monsterHeader.helpers({
 	name() {
-		return 'Goblin Scrapper';
+		console.log(this.data);
+		return this.data.name;
 	}
 });

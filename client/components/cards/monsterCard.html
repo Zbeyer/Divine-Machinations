@@ -1,10 +1,13 @@
 <template name="monsterCard">
-	{{! Blaze https://guide.meteor.com/v1.2/blaze}}
+	{{!--
+	<div class="debug">
+		<pre><code>{{> printJSON this}}</code></pre>
+	</div>
+	--}}
 	<div class="monster-card">
 		{{> monsterHeader}}
 		{{> monsterStats}}
-		{{> monsterAbilities}}
+		{{> monsterTraits}}
 		{{> monsterActions}}
-		{{> monsterDescription}}
 	</div>
 </template>

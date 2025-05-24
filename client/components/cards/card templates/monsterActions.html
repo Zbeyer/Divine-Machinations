@@ -1,13 +1,11 @@
 <template name="monsterActions">
 	<div class="monster-actions">
-		<strong>Multiattack:</strong> The goblin scrapper makes two melee attacks.
-		<br>
-		<strong>Junk Blade:</strong> Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 2)
-		slashing damage.
-		<br>
-		<strong>Thrown Shiv:</strong> Ranged Weapon Attack: +4 to hit, range 20/60 ft., one target. Hit: 6 (1d6 +
-		2) piercing damage.
-		<br>
-		<hr>
+		{{#if actions}}
+			<hr>
+			{{#each actions}}
+				<strong class="action"> {{key}}: </strong> {{value}}
+				<br>
+			{{/each}}
+		{{/if}}
 	</div>
 </template>

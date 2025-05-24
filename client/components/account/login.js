@@ -23,7 +23,7 @@ Template.login.helpers({
 		return Template.instance().isRegistering.get();
 	},
 	currentUser: function () {
-		console.log("Current user:", Meteor.user());
+		// console.log("Current user:", Meteor.user());
 		return Meteor.user(); // Ensures it always returns an object
 	}
 });

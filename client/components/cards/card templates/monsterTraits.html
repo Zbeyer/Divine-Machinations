@@ -1,0 +1,11 @@
+<template name="monsterTraits">
+	<div class="monster-traits">
+		{{#if traits}}
+			<hr>
+			{{#each traits}}
+				<strong class="trait"> {{key}}:</strong> {{value}}
+				<br>
+			{{/each}}
+		{{/if}}
+	</div>
+</template>

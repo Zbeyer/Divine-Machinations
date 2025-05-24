@@ -4,7 +4,9 @@ function getAbilityModifier(score) {
 
 let getModifier = function (score) {
 	const result = getAbilityModifier(score);
-	return result <= 0 ? '0' : `+${result}`;
+	if (!result) return '';
+	if (result < 0) return `(${result})`;
+	return result <= 0 ? '0' : `(+${result})`;
 };
 
 const getXPForCR = (cr) => {
@@ -22,137 +24,115 @@ const getXPForCR = (cr) => {
 
 	return xpTable[cr] || "Invalid CR"; // Returns XP or error message
 };
-
 Template.monsterStats.onCreated(function () {
-	console.log("Monster stats template created");
-	Template.instance.data = Template.instance.data || {
-		type: "Humanoid",
-		subtype: "Foulspawn",
-		str: 13,
-		dex: 15,
-		con: 12,
-		int: 10,
-		wis: 8,
-		cha: 8,
-		ac: 15,
-		hp: 32,
-		senses: {
-			darkVision: 60,
-			tremorSense: 0,
-			blindSight: 0,
-			trueSight: 0
-		},
-		speed: {
-			walk: 30,
-			fly: 0,
-			swim: 0,
-			climb: 0,
-			burrow: 0,
-			hover: 0,
-			teleport: 0
-		},
-		cr: "1/2",
-	};
-	const stats = Template.instance.data;
-	console.log("Monster stats data: %o", stats);
+	// const instance = this;
+	// const data = Template.currentData();
+	// console.log("Card dat`a: %o", data);
 });
 
 Template.monsterStats.helpers({
-	// Senses
-	darkVision() {
-		return Template.instance.data?.senses?.darkVision;
-	},
-	tremorSense() {
-		return Template.instance.data?.senses?.tremorSense;
-	},
-	blindSight() {
-		return Template.instance.data?.senses?.blindSight;
-	},
-	trueSight() {
-		return Template.instance.data?.senses?.trueSight;
-	},
-	keenSenses() {
-		return Template.instance.data?.senses?.keenSenses;
-	},
-	// Speed
-	speedWalk() {
-		return Template.instance.data?.speed?.walk;
-	},
-	speedFly() {
-		return Template.instance.data?.speed?.fly;
-	},
-	speedSwim() {
-		return Template.instance.data?.speed?.swim;
-	},
-	speedClimb() {
-		return Template.instance.data?.speed?.climb;
-	},
-	speedBurrow() {
-		return Template.instance.data?.speed?.burrow;
-	},
-	speedHover() {
-		return Template.instance.data?.speed?.hover;
-	},
-	speedTeleport() {
-		return Template.instance.data?.speed?.teleport;
-	},
-	// Ability Scores
-	str() {
-		return Template.instance.data.str;
-	},
-	strMod() {
-		return getModifier(Template.instance.data.str);
-	},
-	dex() {
-		return Template.instance.data.dex;
-	},
-	dexMod() {
-		return getModifier(Template.instance.data.dex);
-	},
-	con() {
-		return Template.instance.data.con;
-	},
-	conMod() {
-		return getModifier(Template.instance.data.con);
-	},
-	int() {
-		return Template.instance.data.int;
-	},
-	intMod() {
-		return getModifier(Template.instance.data.int);
-	},
-	wis() {
-		return Template.instance.data.wis;
-	},
-	wisMod() {
-		return getModifier(Template.instance.data.wis);
-	},
-	cha() {
-		return Template.instance.data.cha;
-	},
-	chaMod() {
-		return getModifier(Template.instance.data.cha);
-	},
-	// Stats
+	// Core
 	ac() {
-		return Template.instance.data.ac;
+		return Template.currentData()["Armor Class"];
 	},
 	hp() {
-		return Template.instance.data.hp;
+		return Template.currentData()["Hit Points"];
 	},
 	speed() {
-		return Template.instance.data.speed;
+		return Template.currentData()["Speed"];
 	},
 	cr() {
-		return Template.instance.data.cr;
+		return Template.currentData()["Challenge"];
 	},
-	xp() {
-		return getXPForCR(Template.instance.data.cr);
+
+	// Ability Scores
+	str() {
+		return Template.currentData().STR;
 	},
-	type() {
-		return Template.instance.data.type;
+	strMod() {
+		return getModifier(Template.currentData().STR);
 	},
-	subType() {
-		return Template.instance.data.subtype;
-	}
+	dex() {
+		return Template.currentData().DEX;
+	},
+	dexMod() {
+		return getModifier(Template.currentData().DEX);
+	},
+	con() {
+		return Template.currentData().CON;
+	},
+	conMod() {
+		return getModifier(Template.currentData().CON);
+	},
+	int() {
+		return Template.currentData().INT;
+	},
+	intMod() {
+		return getModifier(Template.currentData().INT);
+	},
+	wis() {
+		return Template.currentData().WIS;
+	},
+	wisMod() {
+		return getModifier(Template.currentData().WIS);
+	},
+	cha() {
+		return Template.currentData().CHA;
+	},
+	chaMod() {
+		return getModifier(Template.currentData().CHA);
+	},
+	// Saving Throws
+	strST() {
+		return Template.currentData()["STR Save"];
+	},
+	dexST() {
+		return Template.currentData()["DEX Save"];
+	},
+	conST() {
+		return Template.currentData()["CON Save"];
+	},
+	intST() {
+		return Template.currentData()["INT Save"];
+	},
+	wisST() {
+		return Template.currentData()["WIS Save"];
+	},
+	chaST() {
+		return Template.currentData()["CHA Save"];
+	},
+	// Saves
+	saves() {
+		const saves = Template.currentData()["Saving Throws"];
+		return saves ? Object.entries(saves).map(([key, value]) => ({key, value})) : [];
+	},
+	// Skills
+	skills() {
+		return Object.entries(Template.currentData()["Skills"])?.map(([key, value]) => ({key, value}));
+	},
+	// Damage Vulnerabilities
+	damageVulnerabilities() {
+		return Template.currentData()["Damage Vulnerabilities"];
+	},
+	// Damage Resistances
+	damageResistances() {
+		return Template.currentData()["Damage Resistances"];
+	},
+	// Damage Immunities
+	damageImmunities() {
+		return Template.currentData()["Damage Immunities"];
+	},
+	// Condition Immunities
+	conditionImmunities() {
+		return Template.currentData()["Condition Immunities"];
+	},
+	// Senses
+	senses() {
+		return Template.currentData()["Senses"];
+	},
+	// Languages
+	languages() {
+		return Template.currentData()["Languages"];
+	},
+
 });

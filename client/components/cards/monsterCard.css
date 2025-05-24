@@ -2,28 +2,38 @@
 	--primary: #FEC;
 	--secondary: #4a2f16;
 	font-family: "Book Antiqua", "Georgia", "Times New Roman", serif;
-	width: 350px;
-	height: 624px;
-	padding: 5px;
+	max-width: 360px;
+	min-height: 512px;
 	background-color: var(--primary);
-	border: 2px solid var(--gold);
 	border-radius: 8px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-	/*font-family: 'MedievalSharp', cursive;*/
 	color: var(--secondary);
 	font-size: 16px;
 	text-align: left;
+	padding-bottom: 16px;
+	margin: 16px auto;
+}
+
+.monster-header i {
+	font-size: 12px;
 }
 
 .monster-header {
-	font-size: 24px;
+	padding: 3px;
+	width: 100%;
+	font-size: 18px;
+	/*margin-top: -24px;*/
+	overflow: clip;
 	background-color: var(--secondary);
 	color: var(--primary);
 	font-weight: bold;
 	text-align: center;
-	padding-bottom: 3px;
+	margin: 0;
+	border-radius: 8px 8px 0 0;
 }
-
+.monster-actions, .monster-traits, .monster-stats {
+	padding-left: 16px;
+}
 .stat {
 	font-weight: bold;
 }
