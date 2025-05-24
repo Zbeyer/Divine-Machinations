@@ -25,8 +25,6 @@ const getXPForCR = (cr) => {
 
 Template.monsterStats.onCreated(function () {
 	console.log("Monster stats template created");
-	console.log(Template.instance.data);
-
 	Template.instance.data = Template.instance.data || {
 		type: "Humanoid",
 		subtype: "Foulspawn",
@@ -42,7 +40,8 @@ Template.monsterStats.onCreated(function () {
 			darkVision: 60,
 			tremorSense: 0,
 			blindSight: 0,
-			trueSight: 0},
+			trueSight: 0
+		},
 		speed: {
 			walk: 30,
 			fly: 0,
@@ -54,46 +53,48 @@ Template.monsterStats.onCreated(function () {
 		},
 		cr: "1/2",
 	};
+	const stats = Template.instance.data;
+	console.log("Monster stats data: %o", stats);
 });
 
 Template.monsterStats.helpers({
 	// Senses
 	darkVision() {
-		return Template.instance.data.senses.darkVision;
+		return Template.instance.data?.senses?.darkVision;
 	},
 	tremorSense() {
-		return Template.instance.data.senses.tremorSense;
+		return Template.instance.data?.senses?.tremorSense;
 	},
 	blindSight() {
-		return Template.instance.data.senses.blindSight;
+		return Template.instance.data?.senses?.blindSight;
 	},
 	trueSight() {
-		return Template.instance.data.senses.trueSight;
+		return Template.instance.data?.senses?.trueSight;
 	},
 	keenSenses() {
-		return Template.instance.data.senses.keenSenses;
+		return Template.instance.data?.senses?.keenSenses;
 	},
 	// Speed
 	speedWalk() {
-		return Template.instance.data.speed.walk;
+		return Template.instance.data?.speed?.walk;
 	},
 	speedFly() {
-		return Template.instance.data.speed.fly;
+		return Template.instance.data?.speed?.fly;
 	},
 	speedSwim() {
-		return Template.instance.data.speed.swim;
+		return Template.instance.data?.speed?.swim;
 	},
 	speedClimb() {
-		return Template.instance.data.speed.climb;
+		return Template.instance.data?.speed?.climb;
 	},
 	speedBurrow() {
-		return Template.instance.data.speed.burrow;
+		return Template.instance.data?.speed?.burrow;
 	},
 	speedHover() {
-		return Template.instance.data.speed.hover;
+		return Template.instance.data?.speed?.hover;
 	},
 	speedTeleport() {
-		return Template.instance.data.speed.teleport;
+		return Template.instance.data?.speed?.teleport;
 	},
 	// Ability Scores
 	str() {
