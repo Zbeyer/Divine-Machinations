@@ -1,3 +1,12 @@
 .faction {
 	width: 100%;
 }
+.faction-name {
+	font-size: 24px;
+	text-transform: uppercase;
+}
+.token {
+	height: 256px;
+	width: 256px;
+	margin: 16px auto;
+}

@@ -1,12 +1,20 @@
 <template name="faction">
-<div class="center flex">
 	<section class="faction {{name}}">
-		<h2>{{name}}</h2>
+		<h2 class="faction-name">{{name}}</h2>
 		<p>
 			{{description}}
 		</p>
-		<p>Cards tbd</p>
-		<p>Abilities tbd</p>
+		<div class="center flex">
+			{{#each creatures}}
+				{{> monsterCard}}
+			{{/each}}
+		</div>
+		<br>
+		<div class="center flex">
+		{{#each creatures}}
+			<img src={{pathForToken @index}} alt="" role="presentation" class="token">
+		{{/each}}
+	</div>
+		<br>
 	</section>
-</div>
 </template>
