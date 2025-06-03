@@ -1,12 +1,8 @@
 /* General Layout */
 .character {
-	background: #f4f1de;
 	padding: 20px;
 	border-radius: 10px;
-	border: 2px solid #8b5a2b;
-	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-	max-width: 400px;
-	margin: auto;
+	border: 2px solid var(--gold);
 	text-align: center;
 	font-family: 'Garamond', serif;
 }
@@ -23,21 +19,29 @@
 /* Stat Grid */
 .character-scores {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5px;
 	justify-items: center;
+}
+
+.score {
+	display: inline-flex; /* Allows both horizontal and vertical alignment */
+	justify-content: center; /* Centers horizontally */
+	align-items: center; /* Centers vertically */
+	width: 80px; /* Circle size */
+	height: 80px;
+	border-radius: 50%; /* Makes it a circle */
+	font-weight: bold;
+	border: 2px solid var(--gold); /* Optional border */
+	/*-webkit-text-stroke: 1px var(--body); !* Optional text stroke for better visibility *!*/
+	text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.75);
 }
 
 
 /* Stat Colors */
-.str { background-color: #b22222; } /* Strength - Red */
-.dex { background-color: #228b22; } /* Dexterity - Green */
+.str { background-color: #ab212c; } /* Strength - Red */
+.dex { background-color: #145223; } /* Dexterity - Green */
 .con { background-color: #8b4513; } /* Constitution - Brown */
-.int { background-color: #4169e1; } /* Intelligence - Blue */
-.wis { background-color: #6a5acd; } /* Wisdom - Purple */
-.cha { background-color: #ff8c00; } /* Charisma - Orange */
-
-/* Parchment Effect */
-.character {
-	background: linear-gradient(to bottom, #f4f1de, #e3dac9);
-}
+.int { background-color: #175e82; } /* Intelligence - Blue */
+.wis { background-color: #6629a3; } /* Wisdom - Purple */
+.cha { background-color: #7a1f54; } /* Charisma - Orange */

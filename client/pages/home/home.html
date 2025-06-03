@@ -1,5 +1,76 @@
 <template name="home">
+	<div class="header">
+		{{> header}}
+	</div>
+	<div class="container">
 
+		<div class="main-content page">
+			<div class="character">
+				{{#if currentUser}}
+					{{#if activeCharacter}}
+						{{#if character}}
+							<h1>
+								Name:
+								<span class="editable" data-field="name">{{character.name}}</span>
+								<input type="text" class="edit-input" data-field="name" value="{{character.name}}"
+									   style="display: none;">
+							</h1>
+							<hr>
+							<p>
+								<i>
+									{{ character._id }}
+								</i>
+							</p>
+							<p>
+								<i>
+									{{ character.createdAt }}
+								</i>
+							</p>
+							<hr>
 
+							<div class="character-scores">
+								<span class="score str">STR: <span class="editable"
+																   data-field="str">{{character.str}}</span></span>
+								<input type="number" class="edit-input" data-field="str" value="{{character.str}}"
+									   style="display: none;">
 
+								<span class="score dex">DEX: <span class="editable"
+																   data-field="dex">{{character.dex}}</span></span>
+								<input type="number" class="edit-input" data-field="dex" value="{{character.dex}}"
+									   style="display: none;">
+
+								<span class="score con">CON: <span class="editable"
+																   data-field="con">{{character.con}}</span></span>
+								<input type="number" class="edit-input" data-field="con" value="{{character.con}}"
+									   style="display: none;">
+
+								<span class="score int">INT: <span class="editable"
+																   data-field="int">{{character.int}}</span></span>
+								<input type="number" class="edit-input" data-field="int" value="{{character.int}}"
+									   style="display: none;">
+
+								<span class="score wis">WIS: <span class="editable"
+																   data-field="wis">{{character.wis}}</span></span>
+								<input type="number" class="edit-input" data-field="wis" value="{{character.wis}}"
+									   style="display: none;">
+
+								<span class="score cha">CHA: <span class="editable"
+																   data-field="cha">{{character.cha}}</span></span>
+								<input type="number" class="edit-input" data-field="cha" value="{{character.cha}}"
+									   style="display: none;">
+							</div>
+
+							{{> printJSON character}}
+						{{else}}
+							<p class="no-character">No active character selected.</p>
+						{{/if}}
+					{{/if}}
+				{{/if}}
+			</div>
+		</div>
+		<div class="sidebar">
+			{{> login}}
+			{{> characterPool}}
+		</div>
+	</div>
 </template>

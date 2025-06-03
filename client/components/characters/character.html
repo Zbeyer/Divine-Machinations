@@ -1,7 +1,8 @@
 <template name="character">
-	<div className="character">
-		<h2>{{name}}</h2>
-		<div className="character-scores">
+	<button class="character" data-id="{{_id}}">
+		<h4>{{name}}</h4>
+		<hr>
+		<div class="character-scores">
 			<span class="score str">STR: {{str}}</span>
 			<span class="score dex">DEX: {{dex}}</span>
 			<span class="score con">CON: {{con}}</span>
@@ -9,5 +10,5 @@
 			<span class="score wis">WIS: {{wis}}</span>
 			<span class="score cha">CHA: {{cha}}</span>
 		</div>
-	</div>
+	</button>
 </template>

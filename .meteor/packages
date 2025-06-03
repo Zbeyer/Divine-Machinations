@@ -27,3 +27,5 @@ session
 fortawesome:fontawesome
 accounts-base
 accounts-password
+ostrio:flow-router-extra
+pwix:blaze-layout

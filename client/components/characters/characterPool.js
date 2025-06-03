@@ -8,16 +8,30 @@ Template.characterPool.helpers({
 	}
 });
 
-// Template.characterPool.events({
-// 	"click .character"(event, template) {
-// 		const selectedCharacter = this; // Access the clicked character's data
-// 		console.log("Activated character:", selectedCharacter.name);
-//
-// 		// Example action: Store the active character in a Session variable
-// 		Session.set("activeCharacter", selectedCharacter);
-// 	}
-// });
+Template.characterPool.events({
+	'click .create-character'(event) {
+		Meteor.call('makeNewCharacter', (error, result) => {
+			if (error) {
+				console.error("Error creating character:", error);
+			} else {
+				console.log("Character created:", result);
+			}
+		});
 
+		Meteor.call("getCharacterPool", function (error, result) {
+			if (!error) {
+				Session.set("characterPool", result);
+			}
+		});
+	},
+	'click .character'(event) {
+		const characterId = event.currentTarget.dataset.id; // Gets the data-id attribute
+		if (!characterId) return;
+
+		Session.set("activeCharacter", characterId); // Store active character in session
+		console.log("Active character set:", characterId);
+	}
+});
 
 Tracker.autorun(() => {
 	let pool = Session.get("characterPool");
