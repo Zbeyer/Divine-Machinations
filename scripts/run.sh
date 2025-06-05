@@ -1,3 +1,3 @@
-source $(dirname "$0")/config.sh
+#source $(dirname "$0")/config.sh
 meteor npm install
-meteor run --settings settings.json
+meteor run
