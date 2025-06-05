@@ -9,7 +9,7 @@
 - Repo https://github.com/Zbeyer/Divine-Machinations
 
 ```bash
-meteor deploy machinations
+sh start.sh
 ```
 
 Front end web revolves around these three: `HTML | CSS | JS`
